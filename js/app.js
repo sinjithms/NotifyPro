@@ -215,6 +215,7 @@ function initNav() {
         navigateTo(item.dataset.page);
         document.querySelector('.sidebar')?.classList.remove('open');
         document.getElementById('sidebar-backdrop')?.classList.remove('open');
+        document.getElementById('sidebar-toggle')?.classList.remove('is-open');
       }
     });
     item.addEventListener('keydown', e => {
@@ -235,6 +236,7 @@ function initNav() {
         navigateTo(item.dataset.page);
         document.querySelector('.sidebar')?.classList.remove('open');
         document.getElementById('sidebar-backdrop')?.classList.remove('open');
+        document.getElementById('sidebar-toggle')?.classList.remove('is-open');
       }
     });
   });
@@ -366,15 +368,18 @@ function initMobileSidebar() {
   toggle.addEventListener('click', () => {
     sidebar.classList.toggle('open');
     backdrop.classList.toggle('open');
+    toggle.classList.toggle('is-open');
   });
   backdrop.addEventListener('click', () => {
     sidebar.classList.remove('open');
     backdrop.classList.remove('open');
+    toggle.classList.remove('is-open');
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && sidebar.classList.contains('open')) {
       sidebar.classList.remove('open');
       backdrop.classList.remove('open');
+      toggle.classList.remove('is-open');
     }
   });
 }
