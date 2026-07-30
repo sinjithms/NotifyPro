@@ -21,6 +21,13 @@
 </div>
 <div class="app">
 <!-- ===== SIDEBAR ===== -->
+<div class="mobile-topbar">
+<button class="hamburger" id="sidebar-toggle" aria-label="Toggle navigation">
+<span class="hamburger-bar"></span>
+<span class="hamburger-bar"></span>
+<span class="hamburger-bar"></span>
+</button>
+</div>
 <aside class="sidebar">
 <div class="sidebar-logo">
 <img class="sidebar-logo-img" src="css/notifypro-logo.svg" alt="NotifyPro"/>
@@ -33,9 +40,9 @@
 <i aria-hidden="true" class="fa-solid fa-chevron-down sidebar-chevron"></i>
 </div>
 <div class="sidebar-sub open">
-<div class="sidebar-sub-item active" data-page="dashboard">Overview</div>
-<div class="sidebar-sub-item" data-page="dashboard">Analytics</div>
-<div class="sidebar-sub-item" data-page="dashboard">Reports</div>
+<div class="sidebar-sub-item active" data-page="dashboard" role="button" tabindex="0">Overview</div>
+<div class="sidebar-sub-item" data-page="dashboard" role="button" tabindex="0">Analytics</div>
+<div class="sidebar-sub-item" data-page="dashboard" role="button" tabindex="0">Reports</div>
 </div>
 <div class="sidebar-item has-sub" data-page="templates" role="button" tabindex="0">
 <span class="nav-icon-wrap"><i aria-hidden="true" class="fa-regular fa-file-lines"></i></span>
@@ -44,9 +51,9 @@
 <i aria-hidden="true" class="fa-solid fa-chevron-down sidebar-chevron"></i>
 </div>
 <div class="sidebar-sub">
-<div class="sidebar-sub-item" data-page="templates">All Templates</div>
-<div class="sidebar-sub-item" data-page="templates">Categories</div>
-<div class="sidebar-sub-item" data-page="templates">Create New</div>
+<div class="sidebar-sub-item" data-page="templates" role="button" tabindex="0">All Templates</div>
+<div class="sidebar-sub-item" data-page="templates" role="button" tabindex="0">Categories</div>
+<div class="sidebar-sub-item" data-page="templates" role="button" tabindex="0">Create New</div>
 </div>
 <div class="sidebar-item has-sub" data-page="composer" role="button" tabindex="0">
 <span class="nav-icon-wrap"><i aria-hidden="true" class="fa-regular fa-pen-to-square"></i></span>
@@ -54,9 +61,9 @@
 <i aria-hidden="true" class="fa-solid fa-chevron-down sidebar-chevron"></i>
 </div>
 <div class="sidebar-sub">
-<div class="sidebar-sub-item" data-page="composer">New Template</div>
-<div class="sidebar-sub-item" data-page="composer">From Drafts</div>
-<div class="sidebar-sub-item" data-page="composer">Saved Templates</div>
+<div class="sidebar-sub-item" data-page="composer" role="button" tabindex="0">New Template</div>
+<div class="sidebar-sub-item" data-page="composer" role="button" tabindex="0">From Drafts</div>
+<div class="sidebar-sub-item" data-page="composer" role="button" tabindex="0">Saved Templates</div>
 </div>
 <div class="sidebar-item has-sub" data-page="recipients" role="button" tabindex="0">
 <span class="nav-icon-wrap"><i aria-hidden="true" class="fa-solid fa-users"></i></span>
@@ -64,9 +71,9 @@
 <i aria-hidden="true" class="fa-solid fa-chevron-down sidebar-chevron"></i>
 </div>
 <div class="sidebar-sub">
-<div class="sidebar-sub-item" data-page="recipients">All Recipients</div>
-<div class="sidebar-sub-item" data-page="recipients">Segments</div>
-<div class="sidebar-sub-item" data-page="recipients">Import</div>
+<div class="sidebar-sub-item" data-page="recipients" role="button" tabindex="0">All Recipients</div>
+<div class="sidebar-sub-item" data-page="recipients" role="button" tabindex="0">Segments</div>
+<div class="sidebar-sub-item" data-page="recipients" role="button" tabindex="0">Import</div>
 </div>
 <div class="sidebar-label">Operations</div>
 <div class="sidebar-item has-sub" data-page="scheduler" role="button" tabindex="0">
@@ -75,8 +82,8 @@
 <i aria-hidden="true" class="fa-solid fa-chevron-down sidebar-chevron"></i>
 </div>
 <div class="sidebar-sub">
-<div class="sidebar-sub-item" data-page="scheduler">All Schedules</div>
-<div class="sidebar-sub-item" data-page="scheduler">History</div>
+<div class="sidebar-sub-item" data-page="scheduler" role="button" tabindex="0">All Schedules</div>
+<div class="sidebar-sub-item" data-page="scheduler" role="button" tabindex="0">History</div>
 </div>
 <div class="sidebar-item has-sub" data-page="monitoring" role="button" tabindex="0">
 <span class="nav-icon-wrap"><i aria-hidden="true" class="fa-regular fa-chart-bar"></i></span>
@@ -84,9 +91,9 @@
 <i aria-hidden="true" class="fa-solid fa-chevron-down sidebar-chevron"></i>
 </div>
 <div class="sidebar-sub">
-<div class="sidebar-sub-item" data-page="monitoring">Overview</div>
-<div class="sidebar-sub-item" data-page="monitoring">Logs</div>
-<div class="sidebar-sub-item" data-page="monitoring">Alerts</div>
+<div class="sidebar-sub-item" data-page="monitoring" role="button" tabindex="0">Overview</div>
+<div class="sidebar-sub-item" data-page="monitoring" role="button" tabindex="0">Logs</div>
+<div class="sidebar-sub-item" data-page="monitoring" role="button" tabindex="0">Alerts</div>
 </div>
 <div class="sidebar-label">Notifications</div>
 <div class="sidebar-item has-sub" data-page="user-notifications" role="button" tabindex="0">
@@ -96,43 +103,19 @@
 <i aria-hidden="true" class="fa-solid fa-chevron-down sidebar-chevron"></i>
 </div>
 <div class="sidebar-sub">
-<div class="sidebar-sub-item" data-page="user-notifications">Inbox</div>
-<div class="sidebar-sub-item" data-page="user-notifications">Sent</div>
-<div class="sidebar-sub-item" data-page="user-notifications">Archived</div>
-</div>
-<div class="sidebar-item" data-page="notification-detail" role="button" tabindex="0">
-<span class="nav-icon-wrap"><i aria-hidden="true" class="fa-solid fa-circle-info"></i></span>
-<span>Detail View</span>
+<div class="sidebar-sub-item" data-page="user-notifications" role="button" tabindex="0">Inbox</div>
+<div class="sidebar-sub-item" data-page="user-notifications" role="button" tabindex="0">Sent</div>
+<div class="sidebar-sub-item" data-page="user-notifications" role="button" tabindex="0">Archived</div>
 </div>
 </nav>
-<div class="dropdown sidebar-user-dropdown">
-<div class="sidebar-user" id="sidebar-user-btn">
-<div class="sidebar-user-avatar js-user-avatar">SS</div>
-<div class="sidebar-user-info">
-<div class="sidebar-user-name js-user-name">sinjith soman</div>
-<div class="sidebar-user-role js-user-role">Admin</div>
-</div>
-</div>
-<div aria-label="User menu" class="dropdown-menu" id="sidebar-user-menu" role="menu" style="left:0;right:0;bottom:100%;margin-bottom:4px">
-<div class="dropdown-header">Profile</div>
-<div class="dropdown-item" onclick="showToast('Profile','Viewing profile settings','fa-regular fa-user')" role="menuitem">My Profile</div>
-<div class="dropdown-item" onclick="showToast('Settings','Opening preferences','fa-solid fa-gear')" role="menuitem">Settings</div>
-<div class="dropdown-item" onclick="showToast('Logout','Signed out successfully','fa-solid fa-right-from-bracket')" role="menuitem">Sign Out</div>
-</div>
-</div>
 </aside>
-<!-- Sidebar backdrop for mobile -->
-<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
-<!-- ===== MAIN ===== -->
 <div class="main">
-<!-- TOPBAR -->
-<header class="topbar d-flex justify-content-between align-items-center">
-<div class="topbar-left d-flex align-items-center">
-<button aria-label="Toggle sidebar" class="topbar-menu-btn d-lg-none" id="sidebar-toggle"><i aria-hidden="true" class="fa-solid fa-bars"></i></button>
-<div class="topbar-search ms-2 ms-lg-0">
-<i aria-hidden="true" class="fa-solid fa-magnifying-glass" style="color:var(--text-3);font-size:13px"></i>
-<input aria-label="Search" id="global-search" placeholder="Search anything..." type="text"/>
-<kbd class="d-none d-sm-inline-block" style="font-size:9px;padding:1px 5px;border:1px solid var(--border);border-radius:4px;color:var(--text-3);background:var(--surface-2);white-space:nowrap">⌘K</kbd>
+<header class="topbar">
+<div class="topbar-left">
+  <div class="topbar-search">
+<i class="fa-solid fa-magnifying-glass" style="font-size:13px;color:var(--text-3)"></i>
+<input id="global-search" placeholder="Search notifications, templates..." type="text"/>
+<kbd>Ctrl+K</kbd>
 </div>
 </div>
 <div class="topbar-right d-flex align-items-center">
@@ -510,7 +493,7 @@ Check it out now!</textarea></div>
 <div class="card-header"><span class="card-title">Schedule Settings</span></div>
 <div class="form-group"><label class="form-label">Campaign</label><select class="form-input"><option>Weekly Digest</option><option>Promo Alert</option><option>Welcome Series</option></select></div>
 <div class="form-row">
-<div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" value="2026-07-29"/></div>
+<div class="form-group"><label class="form-label">Date</label><input class="form-input" id="scheduler-date" type="date"/></div>
 <div class="form-group"><label class="form-label">Time</label><input class="form-input" type="time" value="09:00"/></div>
 </div>
 <div class="form-group"><label class="form-label">Repeat</label><select class="form-input"><option>No repeat</option><option>Daily</option><option>Weekly</option><option>Monthly</option></select></div>
@@ -625,7 +608,8 @@ Check it out now!</textarea></div>
 <div style="margin-top:8px;display:flex;gap:6px"><span class="badge badge-success">Opened</span><span class="badge badge-info">Clicked</span></div>
 </div>
 <button class="btn btn-secondary" onclick="showToast('Resending','Notification queued for resend','fa-solid fa-rotate')" style="width:100%">Resend Notification</button>
-</div></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -634,7 +618,7 @@ Check it out now!</textarea></div>
 <!-- ===== MODALS ===== -->
 <div aria-labelledby="confirm-modal-title" aria-modal="true" class="modal-overlay" id="confirm-modal" role="dialog">
 <div class="modal">
-<div class="modal-header"><span class="modal-title js-modal-title" id="confirm-modal-title">Confirm</span><div aria-label="Close modal" class="modal-close-btn js-modal-close" role="button">×</div></div>
+<div class="modal-header"><span class="modal-title js-modal-title" id="confirm-modal-title">Confirm</span><button type="button" aria-label="Close modal" class="modal-close-btn js-modal-close">×</button></div>
 <div class="modal-body"><p class="js-modal-body" style="font-size:13px;color:var(--text-2)">Are you sure?</p></div>
 <div class="modal-footer">
 <button class="btn btn-ghost btn-sm js-modal-close">Cancel</button>
@@ -644,7 +628,7 @@ Check it out now!</textarea></div>
 </div>
 <div aria-labelledby="create-modal-title" aria-modal="true" class="modal-overlay" id="create-modal" role="dialog">
 <div class="modal">
-<div class="modal-header"><span class="modal-title js-modal-title" id="create-modal-title">Create New</span><div aria-label="Close modal" class="modal-close-btn js-modal-close" role="button">×</div></div>
+<div class="modal-header"><span class="modal-title js-modal-title" id="create-modal-title">Create New</span><button type="button" aria-label="Close modal" class="modal-close-btn js-modal-close">×</button></div>
 <div class="modal-body">
 <p class="js-modal-body" style="font-size:13px;color:var(--text-2);margin-bottom:12px">Fill in the details below.</p>
 <div class="form-group"><label class="form-label">Name</label><input class="form-input" placeholder="Template name"/></div>
@@ -658,11 +642,11 @@ Check it out now!</textarea></div>
 </div>
 <div aria-labelledby="schedule-modal-title" aria-modal="true" class="modal-overlay" id="schedule-modal" role="dialog">
 <div class="modal">
-<div class="modal-header"><span class="modal-title js-modal-title" id="schedule-modal-title">Schedule</span><div aria-label="Close modal" class="modal-close-btn js-modal-close" role="button">×</div></div>
+<div class="modal-header"><span class="modal-title js-modal-title" id="schedule-modal-title">Schedule</span><button type="button" aria-label="Close modal" class="modal-close-btn js-modal-close">×</button></div>
 <div class="modal-body">
 <p class="js-modal-body" style="font-size:13px;color:var(--text-2);margin-bottom:12px">Configure schedule settings.</p>
 <div class="form-row">
-<div class="form-group"><label class="form-label">Date</label><input class="form-input" type="date" value="2026-07-30"/></div>
+<div class="form-group"><label class="form-label">Date</label><input class="form-input" id="schedule-modal-date" type="date"/></div>
 <div class="form-group"><label class="form-label">Time</label><input class="form-input" type="time" value="10:00"/></div>
 </div>
 <div class="form-group"><label class="form-label">Repeat</label><select class="form-input"><option>No repeat</option><option>Daily</option><option>Weekly</option><option>Monthly</option></select></div>
@@ -675,23 +659,7 @@ Check it out now!</textarea></div>
 </div>
 <!-- ===== TOASTS ===== -->
 <div aria-live="polite" class="toast-wrap" id="toast-wrap" role="alert"></div>
+<div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 <script src="js/app.js"></script>
-<script>
-// Fix user top button dropdown
-(function() {
-  const btn = document.getElementById('user-top-btn');
-  const menu = document.getElementById('user-top-menu');
-  if (btn && menu) {
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      menu.classList.toggle('open');
-      closeOtherDropdowns();
-    });
-    document.addEventListener('click', function() {
-      menu.classList.remove('open');
-    });
-  }
-})();
-</script>
 </body>
 </html>
